@@ -16,6 +16,10 @@ public class RaftConfigGen {
 	public static RaftSettings raftconfig = new RaftSettings();
 	
 	public static class RaftSettings{
+
+		@Config.Comment("Enables the debugging of the rafts. This will print the momentum of rafts into console!")
+		public Boolean EnableDebug = false;
+
 		@Config.Comment("Adjusting this setting changes the speed of the raft. (Default: 1.0) [Lower than 1 = slower | higher than 1 = faster]")
 		public Double SpeedMultiplier = 1.0;
 		
